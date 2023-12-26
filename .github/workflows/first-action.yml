@@ -1,0 +1,19 @@
+# name of the workflow
+name: First Workflow
+
+# when should workflow be triggered
+# workflow dispatch is a type that can be triggered manually
+on: workflow_dispatch
+
+# define jobs
+jobs:
+  first-job:
+    # server environment that will execute runs
+    runs-on: ubuntu-latest
+    # steps that should be executed
+    steps:
+      - name: Print greeting
+        # command should be run for this step
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
